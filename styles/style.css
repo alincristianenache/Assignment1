@@ -1,0 +1,52 @@
+*{
+    margin: 0%;
+}
+
+body{
+    overflow: hidden;
+    background-color: rgb(55,55,55);
+}
+
+
+.topgrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit 50px);
+    grid-column-gap: 5px;
+    grid-template-rows: 15px 50px 15px;
+    background-color: rgb(55, 55, 55);
+}
+
+.videogrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit 50px);
+    grid-template-rows: repeat(auto-fit 50px);
+    background: gray url(https://www.fjords.com/wp-content/uploads/photo-gallery/slideshow/wallpaper01.jpg);
+}
+
+.bottomgrid{
+    display: grid;
+    grid-template-columns: 15px 50px auto auto auto 50px 15px;
+    grid-template-rows: 15px 50px 15px;
+    background-color: rgb(55, 55, 55);
+}
+
+.logo{
+    grid-column: 1 ;
+    grid-row: 2;
+    width: 50px;
+    height: 50px;
+    padding-left: 15px;
+}
+
+.logo2{
+    grid-column: 2;
+    grid-row: 2;
+    width: 50px;
+    height: 50px;
+
+}
+
+.test{
+    grid-column: 2;
+    grid-row: 2;
+}
