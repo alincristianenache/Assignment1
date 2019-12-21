@@ -76,7 +76,7 @@ body{
 }
 
 h1 { /* This sets the font and size for the any text using the h1 tag */
-    font-family: 'Arvo', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 45px;
 }
 
@@ -102,14 +102,14 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
 .container{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
     grid-column: 2;
     grid-row: 2;
-    font-family: 20px Raleway, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-align: right;
 }
 
 .container a{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font: 20px Raleway, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     margin: 15px 10px;
     position: relative;
     z-index: 0;
