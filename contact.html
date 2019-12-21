@@ -13,18 +13,26 @@
         <img width="50px" height="50px" class="logo" src="images/logo.jpg" alt="logo"> 
         <nav class="container brackets"> 
             <a class= "home-nav" href="index.html">Home</a> 
-            <a class= "portfolio-nav" href="port2.html">Portfolio</a>
+            <a class= "portfolio-nav" href="portfolio.html">Portfolio</a>
             <a class="resume-nav" href="cv.html">Resume</a>
             <a class="contact-nav" href="contact.html">Contact</a>
         </nav>
     </header>
-    
-    <div class="grid"> <!--Grid for main body-->
-        <div class="pic"> 
-            <img class="profile-pic" src="images/profilepic.jpg" alt="profile-pic" width="200px" height="200px">
-            <h1>Junior Software Engineer</h1> 
-            <h2>Alin Enache</h2>
-        </div>
+    <div class="contact">
+        <h1 class="contacttitle">Contact Me</h1>
+        <form class="formname">
+            <h2>Full Name</h2>
+            <input id="nameform" name="nameform" type="text" placeholder="John Smith"/>
+        </form>
+        <form class="formemail">
+            <h2>E-mail Address</h2>
+            <input id="emailform" name="emailform" type="email" placeholder="john@example.com"/>
+        </form>
+        <form class="formmessage">
+            <h2>Your Message</h2>
+            <textarea id="messageform" name="messageform" placeholder="Your message here..."></textarea>
+        </form>
+        <button href="index.html">Submit</button>
     </div>
     <footer class="footer">
         <div class="links"> <!-- Following icons taken from icons8.com -->

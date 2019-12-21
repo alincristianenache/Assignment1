@@ -1,52 +1,390 @@
 *{
-    margin: 0%;
+    margin: 0%; /* The default margin from the page is being removed here */
 }
 
 body{
-    overflow: hidden;
     background-color: rgb(55,55,55);
 }
 
+@media only screen and (max-height: 1000px){
+    body{
+        overflow: scroll;
+    }
+}
 
-.topgrid{
+@media only screen and (max-width: 900px){
+    .logo{
+        height: 70px;
+        width: 70px;
+    }
+    .container a{
+        font-size: 20px !important;
+    }
+    .brackets :before, .brackets :after{
+        font-size: 25px !important;
+    }
+    .aboutcv{
+        font-size: 20px;
+    }
+    .workcv{
+        font-size: 20px;
+    }
+    .aboutpar{
+        font-size: 15px;
+    }
+    .workpar{
+        font-size: 15px;
+    }
+    .contact h1{
+        font-size: 20px;
+    }
+    .contact h2{
+        font-size: 15px;
+    }
+    .contact textarea{
+        max-width: 200px;
+        max-height: 200px;
+        width: 150px;
+        height: 150px;
+    }
+    .portfolio h1{
+        font-size: 20px;
+    }
+    .portfolio h2{
+        font-size: 15px;
+    }
+    .project1 img{
+        height: 100px !important;
+        width: 100px !important;
+        margin: 0;
+    }
+    .project2 img{
+        height: 100px !important;
+        width: 100px !important;
+        margin: 0;
+    }
+    .project3 img{
+        height: 100px !important;
+        width: 100px !important;
+        margin: 0;
+    }
+    .project4 img{
+        height: 100px !important;
+        width: 100px !important;
+        margin: 0;
+    }
+}
+
+h1 { /* This sets the font and size for the any text using the h1 tag */
+    font-family: 'Arvo', sans-serif;
+    font-size: 45px;
+}
+
+.header{ /* This is creating a template for the grid which is used to structure the bar at the top of the screen */
     display: grid;
-    grid-template-columns: repeat(auto-fit 50px);
-    grid-column-gap: 5px;
-    grid-template-rows: 15px 50px 15px;
-    background-color: rgb(55, 55, 55);
+    grid-template-rows: 15px auto 15px;
+    grid-template-columns: 15px auto;
+    background-color: rgb(55,55,55);
 }
 
-.videogrid{
+.footer{ /* This is creating a template for the grid which is used to structure the bar at the top of the screen */
     display: grid;
-    grid-template-columns: repeat(auto-fit 50px);
-    grid-template-rows: repeat(auto-fit 50px);
-    background: gray url(https://www.fjords.com/wp-content/uploads/photo-gallery/slideshow/wallpaper01.jpg);
+    grid-template-rows: 15px auto 15px;
+    grid-template-columns: 15px auto;
+    background-color: rgb(55,55,55);
 }
 
-.bottomgrid{
-    display: grid;
-    grid-template-columns: 15px 50px auto auto auto 50px 15px;
-    grid-template-rows: 15px 50px 15px;
-    background-color: rgb(55, 55, 55);
-}
-
-.logo{
-    grid-column: 1 ;
-    grid-row: 2;
-    width: 50px;
-    height: 50px;
-    padding-left: 15px;
-}
-
-.logo2{
+.logo { /* This sets the position of the logo on the grid of the top bar */
     grid-column: 2;
     grid-row: 2;
-    width: 50px;
-    height: 50px;
-
 }
 
-.test{
+.container{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
     grid-column: 2;
     grid-row: 2;
+    font-family: 20px Raleway, sans-serif;
+    text-align: right;
+}
+
+.container a{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font: 20px Raleway, sans-serif;
+    margin: 15px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.brackets :before, .brackets :after{ /* Code taken and edited from the cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
+    opacity: 0;
+    font-size: 45px;
+    top: 0px;
+    transition: all 0.3s;
+    text-align: center;
+    justify-content: center;
+}
+
+.brackets :before{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
+    content: '[';
+    left: -20px;
+    transform: translateX(60px);
+}
+
+.brackets :after{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
+    content: ']';
+    right: -20px;
+    transform: translateX(-60px);
+}
+
+.brackets :hover:before, .brackets :hover:after{ /* Code taken and edited from cyan section of https://codepen.io/EvyatarDa/pen/waKXMd */
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.grid{ /* This is creating the template for the grid used as the main body of the page */
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 50px 75vh 50px;
+    grid-template-columns: 50px 10% auto 10% 50px;
+    max-height: 85vh;
+    background: rgb(55,55,55) url(https://subtlepatterns.com/patterns/topography.png) repeat 0 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-animation: slide 35s linear infinite;
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
+
+.links{ /* Positions links on grid */
+    grid-column: 3;
+    grid-row: 2;
+    position: relative;
+}
+.github{ /* Resizes github icon*/
+    width: 45px;
+    height: 45px;
+}
+.github:hover{ /* Inverts github icon colour */
+    filter: invert(1);
+}
+.linkedin{ /* Resizes linkedin icon */
+    width: 45px;
+    height: 45px;
+}
+.linkedin:hover{ /* Inverts linkedin icon colour*/
+    filter: invert(1);
+}
+.mail{ /* Resizes mail icon */
+    width: 45px;
+    height: 45px;
+}
+
+.mail:hover{ /* Inverts mail icon colour*/
+    filter: invert(1);
+}
+
+.stackoverflow{ /* Resizes stack icon */
+    width: 45px;
+    height: 45px;
+}
+
+.stackoverflow:hover{ /* Inverts stack icon colour */
+    filter: invert(1);
+}
+
+.pic{ /* Positions profile pic */
+    text-align: center;
+    margin: auto;
+    grid-column: 3;
+    grid-row: 2;
+    color: rgb(55,55,55);
+}
+
+.profile-pic{ /*creates circle border for profile pic */
+    border-style: none;
+    border-radius: 100%;
+    filter: grayscale(0);
+}
+
+.profile-pic:hover{ /* Grayscales profile pic */
+    filter: grayscale(1);
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: 15px 30vw 60vw 15px;
+    grid-template-rows: 15px 20vh 20vh 20vh 20vh 15px;
+    background: rgb(55,55,55) url(https://subtlepatterns.com/patterns/topography.png) repeat 0 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-animation: slide 35s linear infinite;
+}
+
+.project1{
+    grid-row: 2;
+    grid-column: 2;
+    margin: auto;
+}
+.project1 img{
+    height: 150px;
+    width: 250px;
+}
+.pro1par{
+    grid-row: 2;
+    grid-column: 3;
+    margin: auto;
+}
+.project2{
+    grid-row: 3;
+    grid-column: 2;
+    margin: auto;
+}
+.project2 img{
+    height: 150px;
+    width: 250px;
+}
+.pro2par{
+    grid-row: 3;
+    grid-column: 3;
+    margin: auto;
+}
+.project3{
+    grid-row: 4;
+    grid-column: 2;
+    margin: auto;
+}
+.project3 img{
+    height: 150px;
+    width: 250px;
+}
+.pro3par{
+    grid-row: 4;
+    grid-column: 3;
+    margin: auto;
+}
+.project4{
+    grid-row: 5;
+    grid-column: 2;
+    margin: auto;
+}
+.project4 img{
+    height: 150px;
+    width: 250px;
+}
+.pro4par{
+    grid-row: 5;
+    grid-column: 3;
+    margin: auto;
+}
+
+.cv{
+    display: grid;
+    grid-template-columns: 15px 30vw 60vw 15px;
+    grid-template-rows: 15px 41vh 41vh 15px;
+    background: rgb(55,55,55) url(https://subtlepatterns.com/patterns/topography.png) repeat 0 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-animation: slide 35s linear infinite;
+}
+
+.aboutcv{
+    grid-row: 2;
+    grid-column: 2;
+    margin: auto;
+}
+
+.aboutpar{
+    grid-row: 2;
+    grid-column: 3;
+    margin: auto;
+}
+
+.workpar{
+    grid-row: 3;
+    grid-column: 3;
+    margin: auto;
+}
+
+.workcv{
+    grid-row: 3;
+    grid-column: 2;
+    margin: auto;
+}
+
+.contact{ /* This is creating the template for the grid used as the main body of the page */
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: 25px 20vh 10vh 10vh 30vh 10vh 25px;
+    grid-template-columns: 25px auto 25px;
+    max-height: 85vh;
+    background: rgb(55,55,55) url(https://subtlepatterns.com/patterns/topography.png) repeat 0 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-animation: slide 35s linear infinite;
+}
+
+.contacttitle{
+    grid-row: 2;
+    grid-column: 2;
+    margin: auto;
+}
+
+.formname{
+    grid-row: 3;
+    grid-column: 2;
+    margin: auto;
+}
+.formname h2{
+    text-align: center;
+}
+.formname input{
+    width: 300px;
+    height: 25px;
+    border: 1px solid rgb(116, 116, 116);
+}
+
+.formemail{
+    grid-row: 4;
+    grid-column: 2;
+    margin: auto;
+}
+.formemail h2{
+    text-align: center;
+}
+.formemail input{
+    width: 300px;
+    height: 25px;
+    border: 1px solid rgb(116, 116, 116);
+}
+
+.formmessage{
+    grid-row: 5;
+    grid-column: 2;
+    margin: auto;
+}
+.formmessage h2{
+    text-align: center;
+}
+.formmessage textarea{
+    width: 300px;
+    height: 200px;
+    min-width: 200px;
+    max-width: 600px;
+    resize: horizontal;
+    border: 1px solid rgb(116, 116, 116);
+}
+
+.contact button{
+    grid-row: 6;
+    grid-column: 2;
+    margin: auto;
 }
