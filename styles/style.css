@@ -86,6 +86,10 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     grid-template-columns: 15px auto;
     background-color: rgb(55,55,55);
 }
+.header img{
+    width:50px;
+    height:50px; 
+}
 
 .footer{ /* This is creating a template for the grid which is used to structure the bar at the top of the screen */
     display: grid;
@@ -154,6 +158,11 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     margin: 0;
     box-sizing: border-box;
     -webkit-animation: slide 35s linear infinite;
+}
+
+.grid img{
+    height: 200px;
+    width: 200px;
 }
 
 @-webkit-keyframes slide {
