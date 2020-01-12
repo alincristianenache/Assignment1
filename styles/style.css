@@ -3,16 +3,16 @@
 }
 
 body{
-    background-color: rgb(55,55,55);
+    background-color: rgb(55,55,55); /*Sets background color */
 }
 
 @media only screen and (max-height: 1000px){
     body{
-        overflow: scroll;
+        overflow: scroll;/* Media query for scrolling */
     }
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 900px){ /* Media Query for mobile */
     .logo{
         height: 70px;
         width: 70px;
@@ -160,12 +160,12 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     -webkit-animation: slide 35s linear infinite;
 }
 
-.grid img{
+.grid img{ /* ajusts size of images on the index grid */
     height: 200px;
     width: 200px;
 }
 
-@-webkit-keyframes slide {
+@-webkit-keyframes slide { /* defines the sliding background */
     from { background-position: 0 0; }
     to { background-position: -400px 0; }
 }
@@ -225,7 +225,7 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     filter: grayscale(1);
 }
 
-.portfolio{
+.portfolio{/*Creates main grid for portfolio page */
     display: grid;
     grid-template-columns: 15px 30vw 60vw 15px;
     grid-template-rows: 15px 20vh 20vh 20vh 20vh 15px;
@@ -236,7 +236,7 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     -webkit-animation: slide 35s linear infinite;
 }
 
-.project1{
+.project1{ /* the following sections are positioning for the portfolio list */
     grid-row: 2;
     grid-column: 2;
     margin: auto;
@@ -293,7 +293,7 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     margin: auto;
 }
 
-.cv{
+.cv{ /* creates grid used on main cv page */
     display: grid;
     grid-template-columns: 15px 30vw 60vw 15px;
     grid-template-rows: 15px 41vh 41vh 15px;
@@ -304,31 +304,31 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     -webkit-animation: slide 35s linear infinite;
 }
 
-.aboutcv{
+.aboutcv{/*positions the about title */
     grid-row: 2;
     grid-column: 2;
     margin: auto;
 }
 
-.aboutpar{
+.aboutpar{/*positions the about paragraph */
     grid-row: 2;
     grid-column: 3;
     margin: auto;
 }
 
-.workpar{
+.workpar{/* positions the work paragraph */
     grid-row: 3;
     grid-column: 3;
     margin: auto;
 }
 
-.workcv{
+.workcv{/* Positions the work title */
     grid-row: 3;
     grid-column: 2;
     margin: auto;
 }
 
-.contact{ /* This is creating the template for the grid used as the main body of the page */
+.contact{ /* This is creating the template for the grid used as the main body of the contact page */
     display: grid;
     overflow: hidden;
     grid-template-rows: 25px 20vh 10vh 10vh 30vh 10vh 25px;
@@ -341,49 +341,49 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     -webkit-animation: slide 35s linear infinite;
 }
 
-.contacttitle{
+.contacttitle{/*Positions the contact me title */
     grid-row: 2;
     grid-column: 2;
     margin: auto;
 }
 
-.formname{
+.formname{/* Positions the name label */
     grid-row: 3;
     grid-column: 2;
     margin: auto;
 }
-.formname h2{
+.formname h2{/* formats name text */
     text-align: center;
 }
-.formname input{
+.formname input{/* Formats name input box */
     width: 300px;
     height: 25px;
     border: 1px solid rgb(116, 116, 116);
 }
 
-.formemail{
+.formemail{/*Positions the email label */
     grid-row: 4;
     grid-column: 2;
     margin: auto;
 }
-.formemail h2{
+.formemail h2{/* Formats email text*/
     text-align: center;
 }
-.formemail input{
+.formemail input{/*Formats email input box */
     width: 300px;
     height: 25px;
     border: 1px solid rgb(116, 116, 116);
 }
 
-.formmessage{
+.formmessage{/* Positions the message label */
     grid-row: 5;
     grid-column: 2;
     margin: auto;
 }
-.formmessage h2{
+.formmessage h2{/* Formats the messagetext*/
     text-align: center;
 }
-.formmessage textarea{
+.formmessage textarea{/*Formats the message box */
     width: 300px;
     height: 200px;
     min-width: 200px;
@@ -392,7 +392,7 @@ h1 { /* This sets the font and size for the any text using the h1 tag */
     border: 1px solid rgb(116, 116, 116);
 }
 
-.contact button{
+.contact button{/*Positions the contact button */
     grid-row: 6;
     grid-column: 2;
     margin: auto;
